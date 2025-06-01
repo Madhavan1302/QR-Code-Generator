@@ -6,11 +6,11 @@ const QrCode=()=>{
     const [loading,setLoading]=useState(false);
     const [qrData,setQrData]=useState("");
     const [qrSize,setQrSize]=useState(150);
-    function generateQr(){
+    async function generateQr(){
         try{
             setLoading(true);
             const url=`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${encodeURIComponent(qrData)}`;
-            setImg(url)
+            await setImg(url)
         }
         catch(err){
             console.log("Error in generating Qr:"+err);
