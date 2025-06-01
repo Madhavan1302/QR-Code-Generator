@@ -28,7 +28,7 @@ const QrCode=()=>{
             .then((blob)=>{
                 const link=document.createElement("a");
                 link.href=URL.createObjectURL(blob);
-                link.download="qrdata.png";
+                link.download="qrimg.png";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
