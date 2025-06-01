@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./QrCode.css";
-import defaultImg from "./src/assets/default_qr.png";
+import defaultImg from "./assets/default_qr.png";
 
 const QrCode=()=>{
     const [img,setImg]=useState(defaultImg);
