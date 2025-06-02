@@ -23,6 +23,8 @@
     margin: 10px 50%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding: 5px 5px;
+    background-color: white;
 }
 .input-text:focus{
    border-radius: 5px;

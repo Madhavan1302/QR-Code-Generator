@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./QrCode.css";
-import defaultImg from "./src/assets/default_qr.png";
+
+
 
 const QrCode=()=>{
-    const [img,setImg]=useState(defaultImg);
+    const [img,setImg]=useState("");
     const [loading,setLoading]=useState(false);
     const [qrData,setQrData]=useState("");
     const [qrSize,setQrSize]=useState(150);
@@ -12,6 +13,7 @@ const QrCode=()=>{
             setLoading(true);
             const url=`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${encodeURIComponent(qrData)}`;
             setImg(url)
+           
         }
         catch(err){
             console.log("Error in generating Qr:"+err);
